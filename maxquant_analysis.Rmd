@@ -1,0 +1,196 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# library
+```{r}
+library(readxl)
+library(dplyr)
+library(VIM)
+```
+
+# load data
+```{r}
+dat <- read.delim("../sixhosp_c_proteomics_328samples/rawdata/combined/txt/proteinGroups.txt", sep='\t') %>% data.frame()
+#grep("^LFQ.intensity", names(protein), value =TRUE)
+
+```
+
+# data clean up
+```{r}
+# 该过程是为了清洗掉False hits，如Potential.contaminant，Reverse，Only.identified.by.site和Qvalue < 0.01
+df <- dat %>% filter(Reverse != "+") %>% filter(Only.identified.by.site != "+") %>% filter(Potential.contaminant != "+")
+# there is a column indicating the confidence of the protein identification. 
+# In our case, that is Q.value, which represents the probability that the protein is a false hit. 
+# A typical cutoff is set at 0.01. Fortunately, MaxQuant takes care of this operation and all Q values are below the threshold.
+df$Q.value <- as.numeric(df$Q.value)
+df <- df %>%
+  filter(Q.value < 0.01)
+summary(as.numeric(df$Q.value))
+```
+
+
+# Extract Protein and Gene IDs
+```{r}
+# Isolate the first entry
+df$Fasta.headers <- sub(";.*", "", df$Fasta.headers)
+# Extract Protein name
+regex <- regexpr("(?<=_HUMAN.).*(?=.OS)", df$Fasta.headers, perl = TRUE)
+df$Protein.name <- regmatches(df$Fasta.headers, regex)
+# Extract UniProtID
+regex <- regexpr("(?<=\\|).*(?=\\|)", df$Fasta.headers, perl = TRUE)
+df$Protein <- regmatches(df$Fasta.headers, regex)
+# Extract Gene ID
+regex <- regexpr("((?<=\\|[[:alnum:]]{6}\\|).*(?=_HUMAN)|(?<=\\|[[:alnum:]]{10}\\|).*(?=_HUMAN))",
+                 df$Fasta.headers, perl = TRUE)
+df$Gene <- regmatches(df$Fasta.headers, regex)
+```
+
+
+# extract LFQ intensity
+```{r}
+intensity.names <- grep("^LFQ.intensity", colnames(df), value = TRUE)
+dat_intensity <- sapply(data.frame(df)[, colnames(df)%in%intensity.names], as.numeric)
+```
+
+# data imputation
+```{r}
+data <- cbind(df[, c("Protein.IDs", "Gene","Gene.names", "Protein","Protein.name")], dat_intensity)
+data[data == 0] <- NA
+#f<-function(x) sum(x==NA)
+#na_per <- apply(data[,which(colnames(data) %in% intensity.names)],1,f)/(ncol(data)-3)
+na_per <- rowSums(is.na(data[,which(colnames(data) %in% intensity.names)]))/length(intensity.names)
+per_cut <- 0.5
+dat1 <- data[na_per <= per_cut,]
+d <- log2(dat1[,which(colnames(dat1) %in% intensity.names)])
+imp <- VIM::kNN(d, k=10, imp_var=F)
+
+LOG.names <- sub("^LFQ.intensity.", "LOG2_intensity_", colnames(imp))   # rename intensity columns
+colnames(imp) <- LOG.names
+dat2 <- cbind(dat1[,1:5], imp)
+#intensity.names <- grep("^LFQ.intensity", colnames(dat1), value = TRUE)
+#dat2 <- cbind(dat2, dat1[, which(colnames(dat1) %in% intensity.names)])
+#grep("^LOG2", names(dat2), value =TRUE)
+```
+
+# data inversion
+```{r}
+attach(dat2)
+dat3 <- cbind(Gene.names, dat2[,which(colnames(dat1) %in% intensity.names)])
+detach(dat2)
+LOG.names1 <- sub("LOG2_intensity_", "", colnames(dat3))   # rename intensity columns
+colnames(dat3) <- LOG.names1
+dat4 <- as.data.frame(t(dat3[,-1]))
+colnames(dat4) <- dat3$Gene.names
+write.csv(dat4, "328_samples_proteomics.csv")
+
+```
+
+# match meta info
+```{r}
+meta <- read_excel("../sixhosp_aging_project_20210719/20210719/input/immune_cells_data_aging_20210719.xls")
+LOG.names2 <- gsub("_", "-", rownames(dat4)) 
+rownames(dat4) <- LOG.names2
+sample_id <- intersect(meta$sample, rownames(dat4))
+
+meta1 <- meta[match(sample_id, meta$sample),]
+dat5 <- dat4[match(sample_id, rownames(dat4)),]
+
+
+protein_data <- cbind(meta1[,2:5], dat5)
+write.csv(protein_data, "212_samples_proteomics_with_meta.csv")
+
+source_filter <- protein_data %>%
+  filter(source %in% c("GV", "SHH6"))
+
+```
+
+
+# plots
+```{r}
+library(rjson)
+library(RCurl)
+library(ggstatsplot)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+data <-read.delim("../sixhosp_maxquant_proteomics_328samples/rawdata/combined/txt/evidence.txt")
+# peptide length distribution
+number_pep <- data %>%
+  dplyr::select(Length, m.z) %>%
+  group_by(Length, m.z) %>%
+  summarize(n=n())
+ggplot(data=number_pep, aes(x=Length, y=n,fill=Length))+
+  geom_bar(stat="identity")+
+  scale_fill_continuous(low="blue", high="red")+
+  theme_minimal()+
+  labs(title="peptide Length distribution",y="amount")
+
+# scatter plot m.z VS peptide length
+ggstatsplot::ggscatterstats(data = data,
+                            x=Length,
+                            y=m.z,
+                            messages=FALSE)
+
+# 也可以随机挑选observations
+#set.seed(123)
+#sample(x,10)
+
+
+```
+
+
+
+# 212 samples with 3 after duplicated samples 
+```{r}
+data <- read.csv("../212_samples_linear_regression/input/212_samples_proteomics_with_meta.csv")
+data1 <- readxl::read_excel("../212_samples_linear_regression/00_pca/209_with_10_duplicated_samples.xlsx") %>% data.frame()
+rownames(data1) <- data1[,1]
+#features <- match(colnames(data)[7:430], colnames(data1)[3:455])
+#after<- data1[which(rownames(data1) %in% c("SH201905-441-after",  "SH201905-459-after", "SH201905-466-after")),]
+#after <- after[,which(colnames(after) %in% colnames(data[7:430]))]
+data1 <- data1[-c(218:219),]
+data1 <- data1[-c(214:215),]
+after <- data1[213:215,]
+data1 <- data1[1:212,]
+samples <- match(rownames(data1), data$X)
+meta <- data[samples,c(2:6)]
+df <- cbind(meta,data1)
+meta_after <- data[which(data$X %in% c("SH201905-441",  "SH201905-459", "SH201905-466")),2:6]
+after <- cbind(meta_after, after)
+df <- rbind(df, after)
+df <- df[,c(6,1:5,7:460)]
+rownames(df) <- df[,1]
+df <- df[,-1]
+write.csv(df,"212_and_3_duplicated_samples_with_meta.csv")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
