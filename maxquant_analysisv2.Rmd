@@ -1,0 +1,111 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# library
+```{r}
+library(readxl)
+library(dplyr)
+library(VIM)
+```
+
+# load data
+```{r}
+library(readxl)
+dat <- read_excel("../rawdata/proteinGroups_原始数据.xlsx") %>% data.frame()
+
+# dat <- read.delim("../rawdata/proteinGroups_原始数据.xlsx", sep='\t') %>% data.frame()
+#grep("^LFQ.intensity", names(protein), value =TRUE)
+
+```
+
+# data clean up
+```{r}
+# 该过程是为了清洗掉False hits，如Potential.contaminant，Reverse，Only.identified.by.site和Qvalue < 0.01
+# df <- dat %>% filter(Reverse != "+") %>% filter(Only.identified.by.site != "+") %>% filter(Potential.contaminant != "+")
+# there is a column indicating the confidence of the protein identification. 
+# In our case, that is Q.value, which represents the probability that the protein is a false hit. 
+# A typical cutoff is set at 0.01. Fortunately, MaxQuant takes care of this operation and all Q values are below the threshold.
+df <- dat
+df$Q.value <- as.numeric(df$Q.value)
+df <- df %>% filter(Q.value < 0.01)
+summary(as.numeric(df$Q.value))
+```
+
+
+# Extract Protein and Gene IDs
+```{r}
+# # Isolate the first entry
+# df$Fasta.headers <- sub(";.*", "", df$Fasta.headers)
+# # Extract Protein name
+# regex <- regexpr("(?<=_HUMAN.).*(?=.OS)", df$Fasta.headers, perl = TRUE)
+# df$Protein.name <- regmatches(df$Fasta.headers, regex)
+# # Extract UniProtID
+# regex <- regexpr("(?<=\\|).*(?=\\|)", df$Fasta.headers, perl = TRUE)
+# df$Protein <- regmatches(df$Fasta.headers, regex)
+# # Extract Gene ID
+# regex <- regexpr("((?<=\\|[[:alnum:]]{6}\\|).*(?=_HUMAN)|(?<=\\|[[:alnum:]]{10}\\|).*(?=_HUMAN))",
+#                  df$Fasta.headers, perl = TRUE)
+# df$Gene <- regmatches(df$Fasta.headers, regex)
+
+df$Protein.name <-df$Protein.names
+df$Protein <-df$Protein.IDs
+df$Gene <-df$Gene.names 
+
+```
+
+
+# extract LFQ intensity
+```{r}
+intensity.names <- grep("^LFQ.intensity", colnames(df), value = TRUE)
+dat_intensity <- sapply(data.frame(df)[, colnames(df)%in%intensity.names], as.numeric)
+```
+
+# data imputation
+```{r}
+data <- cbind(df[, c("Protein.IDs", "Gene","Gene.names", "Protein","Protein.name")], dat_intensity)
+data[data == 0] <- NA
+#f<-function(x) sum(x==NA)
+#na_per <- apply(data[,which(colnames(data) %in% intensity.names)],1,f)/(ncol(data)-3)
+na_per <- rowSums(is.na(data[,which(colnames(data) %in% intensity.names)]))/length(intensity.names)
+per_cut <- 0.5
+dat1 <- data[na_per <= per_cut,]
+d <- log2(dat1[,which(colnames(dat1) %in% intensity.names)])
+imp <- VIM::kNN(d, k=10, imp_var=F)
+
+LOG.names <- sub("^LFQ.intensity.", "LOG2_intensity_", colnames(imp))   # rename intensity columns
+colnames(imp) <- LOG.names
+dat2 <- cbind(dat1[,1:5], imp)
+#intensity.names <- grep("^LFQ.intensity", colnames(dat1), value = TRUE)
+#dat2 <- cbind(dat2, dat1[, which(colnames(dat1) %in% intensity.names)])
+#grep("^LOG2", names(dat2), value =TRUE)
+```
+
+# data inversion
+```{r}
+attach(dat2)
+dat3 <- cbind(Gene.names, dat2[,which(colnames(dat1) %in% intensity.names)])
+detach(dat2)
+LOG.names1 <- sub("LOG2_intensity_", "", colnames(dat3))   # rename intensity columns
+colnames(dat3) <- LOG.names1
+dat4 <- as.data.frame(t(dat3[,-1]))
+colnames(dat4) <- dat3$Gene.names
+write.csv(dat4, "15_samples_proteomics.csv",row.names = TRUE)
+
+```
+
+
+
+
+
+
+
+
+
+
+
