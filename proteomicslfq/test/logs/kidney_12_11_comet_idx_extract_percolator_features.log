@@ -1,0 +1,4 @@
+Loading input file: kidney_12_11_comet_idx.idXML
+writing output file: kidney_12_11_comet_idx_feat.idXML
+PSMFeatureExtractor finished successfully!
+PSMFeatureExtractor took 1.00 s (wall), 0.90 s (CPU), 0.04 s (system), 0.86 s (user); Peak Memory Usage: 60 MB.

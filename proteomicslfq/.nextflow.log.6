@@ -1,0 +1,290 @@
+Feb-24 17:06:47.097 [main] DEBUG nextflow.cli.Launcher - Setting http proxy: ProxyConfig[protocol=http; host=127.0.0.1; port=7890]
+Feb-24 17:06:47.120 [main] DEBUG nextflow.cli.Launcher - Setting https proxy: ProxyConfig[protocol=https; host=127.0.0.1; port=7890]
+Feb-24 17:06:47.120 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0 -profile test_full,docker --outdir test --add_decoys --missing_decoy_action warn
+Feb-24 17:06:47.178 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.1
+Feb-24 17:06:47.198 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/zhiyu/.nextflow/plugins; core-plugins: nf-amazon@1.11.0,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.4,nf-tower@1.5.5,nf-wave@0.5.2
+Feb-24 17:06:47.207 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-24 17:06:47.208 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-24 17:06:47.212 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Feb-24 17:06:47.221 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-24 17:06:48.143 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0/nextflow.config
+Feb-24 17:06:48.144 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0/nextflow.config
+Feb-24 17:06:48.153 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full,docker`
+Feb-24 17:06:49.621 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, uzl_omics, ifb_core, denbi_qbic, alice, mjolnir_globe, uppmax, incliva, ilifu, uge, rosalind_uge, dev, lugh, unibe_ibu, vai, czbiohub_aws, jax, ccga_med, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, pdc_kth, googlels, daisybio, eddie, test_localize, medair, biowulf, bi, bigpurple, test_speccount, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, icr_davros, ceres, munin, rosalind, hasta, cfc, uzh, ebi_codon_slurm, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, biohpc_gen, mana, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, imperial, maestro, software_license, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, computerome, ucd_sonic, seg_globe, sanger, dkfz, pasteur, ethz_euler, lsf, test_full, imb, tuos_stanage, azurebatch, hki, crukmi, csiro_petrichor, docker, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, self_hosted_runner, tufts, uw_hyak_pedslabs, utd_sysbio, debug, genouest, cbe, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Feb-24 17:06:49.662 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=1 by probing script field
+Feb-24 17:06:49.684 [main] INFO  nextflow.cli.CmdRun - Launching `/data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0/main.nf` [sick_knuth] DSL1 - revision: 18f2d39694
+Feb-24 17:06:49.684 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-24 17:06:49.684 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Feb-24 17:06:49.689 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/zhiyu/.nextflow/secrets/store.json
+Feb-24 17:06:49.691 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2213639b] - activable => nextflow.secret.LocalSecretsProvider@2213639b
+Feb-24 17:06:49.750 [main] DEBUG nextflow.Session - Session UUID: 7b356c2c-9b94-4a1d-a5af-df6a946525b1
+Feb-24 17:06:49.751 [main] DEBUG nextflow.Session - Run name: sick_knuth
+Feb-24 17:06:49.751 [main] DEBUG nextflow.Session - Executor pool size: 160
+Feb-24 17:06:49.761 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=480; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-24 17:06:49.802 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.1 build 5828
+  Created: 27-10-2022 16:58 UTC (28-10-2022 00:58 CDT)
+  System: Linux 5.4.0-26-generic
+  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 737719@w31 [10.1.6.31]
+  CPUs: 160 - Mem: 1007.3 GB (307.4 GB) - Swap: 14.5 GB (14.5 GB)
+Feb-24 17:06:49.834 [main] DEBUG nextflow.Session - Work-dir: /data2/zhiyu/software/proteomicslfq/work [xfs]
+Feb-24 17:06:49.850 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-24 17:06:49.859 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-24 17:06:49.941 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-24 17:06:49.951 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 161; maxThreads: 1000
+Feb-24 17:06:50.153 [main] DEBUG nextflow.Session - Session start
+Feb-24 17:06:50.166 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /data2/zhiyu/software/proteomicslfq/test/pipeline_info/execution_trace.txt
+Feb-24 17:06:52.342 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-24 17:06:52.435 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /data2/zhiyu/software/proteomicslfq/test-datasets-proteomicslfq/testdata-aws/; pattern: *.raw; options: [checkIfExists:true]
+Feb-24 17:06:52.614 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name raw_file_conversion
+Feb-24 17:06:52.615 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_low,process_single_thread` for process with name raw_file_conversion
+Feb-24 17:06:52.617 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:52.618 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:52.626 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-24 17:06:52.631 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=160; memory=1007.3 GB; capacity=160; pollInterval=100ms; dumpInterval=5m
+Feb-24 17:06:52.726 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name mzml_indexing
+Feb-24 17:06:52.727 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:52.727 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:52.815 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_very_low` matches labels `process_very_low,process_single_thread` for process with name generate_decoy_database
+Feb-24 17:06:52.815 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_very_low,process_single_thread` for process with name generate_decoy_database
+Feb-24 17:06:52.817 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:52.819 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:52.846 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name openms_peakpicker
+Feb-24 17:06:52.850 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:52.850 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:52.935 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name search_engine_msgf
+Feb-24 17:06:52.936 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:52.937 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:52.992 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name search_engine_comet
+Feb-24 17:06:52.994 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:52.994 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.049 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name index_peptides
+Feb-24 17:06:53.050 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.051 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.068 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_very_low` matches labels `process_very_low,process_single_thread` for process with name extract_percolator_features
+Feb-24 17:06:53.068 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_very_low,process_single_thread` for process with name extract_percolator_features
+Feb-24 17:06:53.069 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.070 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.082 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name percolator
+Feb-24 17:06:53.082 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.082 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.091 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_very_low` matches labels `process_very_low,process_single_thread` for process with name fdr_idpep
+Feb-24 17:06:53.091 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_very_low,process_single_thread` for process with name fdr_idpep
+Feb-24 17:06:53.091 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.092 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.098 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name idpep
+Feb-24 17:06:53.098 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.098 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.104 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_very_low` matches labels `process_very_low,process_single_thread` for process with name idscoreswitcher_to_qval
+Feb-24 17:06:53.111 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_very_low,process_single_thread` for process with name idscoreswitcher_to_qval
+Feb-24 17:06:53.111 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.111 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.124 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium,process_single_thread` for process with name consensusid
+Feb-24 17:06:53.124 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_medium,process_single_thread` for process with name consensusid
+Feb-24 17:06:53.125 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.125 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.130 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium,process_single_thread` for process with name fdr_consensusid
+Feb-24 17:06:53.130 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_medium,process_single_thread` for process with name fdr_consensusid
+Feb-24 17:06:53.131 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.131 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.137 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_very_low` matches labels `process_very_low,process_single_thread` for process with name idfilter
+Feb-24 17:06:53.138 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_very_low,process_single_thread` for process with name idfilter
+Feb-24 17:06:53.138 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.138 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.144 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:06:53.145 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_very_low` matches labels `process_very_low,process_single_thread` for process with name idscoreswitcher_for_luciphor
+Feb-24 17:06:53.146 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_very_low,process_single_thread` for process with name idscoreswitcher_for_luciphor
+Feb-24 17:06:53.146 [Task submitter] INFO  nextflow.Session - [3e/fbbcdc] Submitted process > generate_decoy_database (1)
+Feb-24 17:06:53.146 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.146 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.163 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name luciphor
+Feb-24 17:06:53.164 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:06:53.164 [Task submitter] INFO  nextflow.Session - [cd/3ab9b6] Submitted process > raw_file_conversion (2)
+Feb-24 17:06:53.164 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.164 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.171 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:06:53.171 [Task submitter] INFO  nextflow.Session - [27/8204a1] Submitted process > raw_file_conversion (1)
+Feb-24 17:06:53.181 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:06:53.181 [Task submitter] INFO  nextflow.Session - [b6/c46fbb] Submitted process > raw_file_conversion (3)
+Feb-24 17:06:53.187 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name proteomicslfq
+Feb-24 17:06:53.187 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.187 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.188 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:06:53.188 [Task submitter] INFO  nextflow.Session - [b8/ccc11d] Submitted process > raw_file_conversion (5)
+Feb-24 17:06:53.194 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:06:53.194 [Task submitter] INFO  nextflow.Session - [9c/b4bbbc] Submitted process > raw_file_conversion (4)
+Feb-24 17:06:53.195 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name msstats
+Feb-24 17:06:53.195 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.195 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.200 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:06:53.200 [Task submitter] INFO  nextflow.Session - [87/6a1fb0] Submitted process > raw_file_conversion (6)
+Feb-24 17:06:53.202 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name ptxqc
+Feb-24 17:06:53.203 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single_thread` matches labels `process_low,process_single_thread` for process with name ptxqc
+Feb-24 17:06:53.203 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.203 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.206 [main] INFO  nextflow.Nextflow - -[2m--------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/proteomicslfq v1.0.0[0m
+-[2m--------------------------------------------------[0m-
+
+Feb-24 17:06:53.210 [main] INFO  nextflow.Nextflow - Run Name          : sick_knuth
+Max Resources     : 500 GB memory, 120 cpus, 20h time per job
+Container         : docker - nfcore/proteomicslfq:1.0.0
+Output dir        : test
+Launch dir        : /data2/zhiyu/software/proteomicslfq
+Working dir       : /data2/zhiyu/software/proteomicslfq/work
+Script dir        : /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0
+User              : zhiyu
+Config Profile    : test_full,docker
+Config Profile Description: Real-world sized test dataset to check pipeline function and sanity of results
+Config Files      : /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0/nextflow.config
+Feb-24 17:06:53.210 [main] INFO  nextflow.Nextflow - -[2m--------------------------------------------------[0m-
+Feb-24 17:06:53.228 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:get_software_versions` matches process get_software_versions
+Feb-24 17:06:53.228 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.228 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.233 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-24 17:06:53.233 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 17:06:53.239 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: percolator, idfilter, raw_file_conversion, proteomicslfq, output_documentation, fdr_consensusid, fdr_idpep, ptxqc, luciphor, mzml_indexing, index_peptides, idscoreswitcher_to_qval, generate_decoy_database, sdrf_parsing, openms_peakpicker, idpep, msstats, search_engine_comet, idscoreswitcher_for_luciphor, extract_percolator_features, get_software_versions, search_engine_msgf, consensusid
+Feb-24 17:06:53.242 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Feb-24 17:06:53.242 [main] DEBUG nextflow.Session - Session await
+Feb-24 17:06:53.256 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:06:53.257 [Task submitter] INFO  nextflow.Session - [8f/3133f4] Submitted process > output_documentation
+Feb-24 17:06:53.274 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:06:53.275 [Task submitter] INFO  nextflow.Session - [92/01a7fb] Submitted process > get_software_versions
+Feb-24 17:06:55.222 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: output_documentation; status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/8f/3133f46f501393e3e845f0843e594d]
+Feb-24 17:06:55.243 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=480; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-24 17:06:56.699 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: get_software_versions; status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/92/01a7fbe1a293322483f3777fa34e58]
+Feb-24 17:06:56.789 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: generate_decoy_database (1); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/3e/fbbcdcaacbc7e0de3974496f5ad22b]
+Feb-24 17:11:52.788 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 6 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: raw_file_conversion (2); status: RUNNING; exit: -; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/cd/3ab9b6f0a4459b7b922fe5039f2cd8]
+~> TaskHandler[id: 1; name: raw_file_conversion (1); status: RUNNING; exit: -; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/27/8204a12f358a6e5799467cfa9fb182]
+~> TaskHandler[id: 3; name: raw_file_conversion (3); status: RUNNING; exit: -; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/b6/c46fbb062f9bf3b563f707f6987e20]
+~> TaskHandler[id: 5; name: raw_file_conversion (5); status: RUNNING; exit: -; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/b8/ccc11d07ec54ce030434cedcb3f4c0]
+~> TaskHandler[id: 4; name: raw_file_conversion (4); status: RUNNING; exit: -; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/9c/b4bbbc2765a4d46baa42c1a035b5ce]
+~> TaskHandler[id: 6; name: raw_file_conversion (6); status: RUNNING; exit: -; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/87/6a1fb0046f21922c52b95ccfc712c1]
+Feb-24 17:14:36.441 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: raw_file_conversion (4); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/9c/b4bbbc2765a4d46baa42c1a035b5ce]
+Feb-24 17:14:36.548 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:14:36.549 [Task submitter] INFO  nextflow.Session - [11/0ed046] Submitted process > search_engine_comet (1)
+Feb-24 17:14:36.748 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: raw_file_conversion (3); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/b6/c46fbb062f9bf3b563f707f6987e20]
+Feb-24 17:14:36.795 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:14:36.795 [Task submitter] INFO  nextflow.Session - [84/2305eb] Submitted process > search_engine_comet (2)
+Feb-24 17:14:43.396 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: raw_file_conversion (6); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/87/6a1fb0046f21922c52b95ccfc712c1]
+Feb-24 17:14:43.422 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:14:43.423 [Task submitter] INFO  nextflow.Session - [64/5969e6] Submitted process > search_engine_comet (3)
+Feb-24 17:14:54.910 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: raw_file_conversion (2); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/cd/3ab9b6f0a4459b7b922fe5039f2cd8]
+Feb-24 17:14:54.947 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:14:54.948 [Task submitter] INFO  nextflow.Session - [92/ec406d] Submitted process > search_engine_comet (4)
+Feb-24 17:14:55.067 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: raw_file_conversion (5); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/b8/ccc11d07ec54ce030434cedcb3f4c0]
+Feb-24 17:14:55.089 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:14:55.090 [Task submitter] INFO  nextflow.Session - [0f/f4bc49] Submitted process > search_engine_comet (5)
+Feb-24 17:14:57.769 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: raw_file_conversion (1); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/27/8204a12f358a6e5799467cfa9fb182]
+Feb-24 17:14:57.797 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:14:57.798 [Task submitter] INFO  nextflow.Session - [02/3aa677] Submitted process > search_engine_comet (6)
+Feb-24 17:15:38.456 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: search_engine_comet (2); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/84/2305ebdd9a7ad1fb1c9bffebaf5951]
+Feb-24 17:15:38.551 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:15:38.552 [Task submitter] INFO  nextflow.Session - [47/7e0af4] Submitted process > index_peptides (1)
+Feb-24 17:15:43.862 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: index_peptides (1); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/47/7e0af43f97cf59ab52c7ad5fe11af9]
+Feb-24 17:15:43.889 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:15:43.890 [Task submitter] INFO  nextflow.Session - [e9/c5cc38] Submitted process > extract_percolator_features (1)
+Feb-24 17:15:45.302 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: search_engine_comet (1); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/11/0ed046e67710929770eea4911a6553]
+Feb-24 17:15:45.334 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:15:45.335 [Task submitter] INFO  nextflow.Session - [2c/c1eca6] Submitted process > index_peptides (2)
+Feb-24 17:15:47.500 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: search_engine_comet (3); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/64/5969e65bd7979d1a77286fa46fb3e3]
+Feb-24 17:15:47.520 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:15:47.521 [Task submitter] INFO  nextflow.Session - [ab/6dcf3f] Submitted process > index_peptides (3)
+Feb-24 17:15:49.238 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: extract_percolator_features (1); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/e9/c5cc3833cfe6a50c9bf12e2ecb335f]
+Feb-24 17:15:49.291 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:15:49.292 [Task submitter] INFO  nextflow.Session - [1b/4709b6] Submitted process > percolator (1)
+Feb-24 17:15:49.977 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: index_peptides (2); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/2c/c1eca66842c90fe225e10e3c37ea8f]
+Feb-24 17:15:49.996 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:15:50.000 [Task submitter] INFO  nextflow.Session - [a3/86b12f] Submitted process > extract_percolator_features (2)
+Feb-24 17:15:52.439 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: index_peptides (3); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/ab/6dcf3ffdd125db1f6e95fc1924855d]
+Feb-24 17:15:52.457 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 17:15:52.457 [Task submitter] INFO  nextflow.Session - [03/b43cc6] Submitted process > extract_percolator_features (3)
+Feb-24 17:15:53.458 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: percolator (1); status: COMPLETED; exit: 11; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/1b/4709b6831d8ab19c17fedad89ffd19]
+Feb-24 17:15:53.478 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'percolator (1)'
+
+Caused by:
+  Process `percolator (1)` terminated with an error exit status (11)
+
+Command executed:
+
+  ## Percolator does not have a threads parameter. Set it via OpenMP env variable,
+  ## to honor threads on clusters
+  OMP_NUM_THREADS=8 PercolatorAdapter \
+                      -in UPS1_2500amol_R3_comet_idx_feat.idXML \
+                      -out UPS1_2500amol_R3_comet_idx_feat_perc.idXML \
+                      -threads 8 \
+                      -subset_max_train 300000 \
+                      -decoy_pattern rev \
+                      -post_processing_tdc \
+                      -score_type pep \
+                      > UPS1_2500amol_R3_comet_idx_feat_percolator.log
+
+Command exit status:
+  11
+
+Command output:
+  (empty)
+
+Command error:
+  
+  stty: 'standard input': Inappropriate ioctl for device
+  PercolatorAdapter -- Facilitate input to Percolator and reintegrate.
+  Full documentation: http://www.openms.de/documentation/TOPP_PercolatorAdapter.html
+  Version: 2.6.0-pre-exported-20201001 Oct  1 2020, 01:37:06
+  To cite OpenMS:
+    Rost HL, Sachsenberg T, Aiche S, Bielow C et al.. OpenMS: a flexible open-source software platform for mass spectrometry data analysis. Nat Meth. 2016; 13, 9: 741-748. doi:10.1038/nmeth.3959.
+  
+  Usage:
+    PercolatorAdapter <options>
+  
+  Options (mandatory options marked with '*'):
+    -in <files>                           Input file(s) (valid formats: 'mzid', 'idXML')
+    -in_decoy <files>                     Input decoy file(s) in case of separate searches (valid formats: 'mzid', 'idXML')
+    -in_osw <file>                        Input file in OSW format (valid formats: 'OSW')
+    -out <file>*                          Output file (valid formats: 'idXML', 'mzid', 'osw')
+    -out_type <type>                      Output file type -- default: determined from file extension or content. (valid: 'mzid', 'idXML', 'osw')
+    -enzyme <enzyme>                      Type of enzyme: no_enzyme,elastase,pepsin,proteinasek,thermolysin,chymotrypsin,lys-n,lys-c,arg-c,asp-n,glu-c,trypsin,trypsinp (default: 'trypsin' valid: 'no_enzyme', 'elastase', 'pepsin', 'proteinasek', 'thermolysin', 'chymotrypsin', 'lys-n', 'lys-c', 'arg-c', 'asp-n', 'glu-c', 'trypsin', 'trypsinp')
+    -percolator_executable <executable>*  The Percolator executable. Provide a full or relative path, or make sure it can be found in your PATH environment.
+    -peptide_level_fdrs                   Calculate peptide-level FDRs instead of PSM-level FDRs.
+    -protein_level_fdrs                   Use the picked protein-level FDR to infer protein probabilities. Use the -fasta option and -decoy_pattern to set the Fasta file and decoy pattern.
+    -osw_level <osw_level>                OSW: Either "ms1", "ms2" or "transition"; the data level selected for scoring. (default: 'ms2')
+    -score_type <type>                    Type of the peptide main score (default: 'q-value' valid: 'q-value', 'pep', 'svm')
+                                          
+  Common TOPP options:
+    -ini <file>                           Use the given TOPP INI file
+    -threads <n>                          Sets the number of threads allowed to be used by the TOPP tool (default: '1')
+    -write_ini <file>                     Writes the default configuration file
+    --help                                Shows options
+    --helphelp                            Shows all options (including advanced)
+
+Work dir:
+  /data2/zhiyu/software/proteomicslfq/work/1b/4709b6831d8ab19c17fedad89ffd19
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Feb-24 17:15:53.482 [Task monitor] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Feb-24 17:15:53.501 [main] DEBUG nextflow.Session - Session await > all processes finished
+Feb-24 17:15:55.706 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: extract_percolator_features (2); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/a3/86b12f27dbc60b6ef7094622ce1f32]
+Feb-24 17:15:57.513 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: search_engine_comet (4); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/92/ec406d3cdb9e3e7cb049cb0c0c6019]
+Feb-24 17:15:57.794 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: extract_percolator_features (3); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/03/b43cc6c7a8a97b76bf32d73368fddb]
+Feb-24 17:15:59.247 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: search_engine_comet (6); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/02/3aa67763d019c872b58d3b447f2e6f]
+Feb-24 17:16:04.402 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: search_engine_comet (5); status: COMPLETED; exit: 0; error: -; workDir: /data2/zhiyu/software/proteomicslfq/work/0f/f4bc4956ff7e32218b9e5d5b254727]
+Feb-24 17:16:04.412 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-24 17:16:04.428 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Feb-24 17:16:04.632 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/proteomicslfq][0;31m Pipeline completed with errors[0m-
+Feb-24 17:16:04.636 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=21; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1h 39m 5s; failedDuration=33s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=9; peakCpus=48; peakMemory=192 GB; ]
+Feb-24 17:16:04.636 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Feb-24 17:16:04.637 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Feb-24 17:16:04.719 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":46.1,"min":46.1,"q1":46.1,"q2":46.1,"q3":46.1,"max":46.1,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"process":"output_documentation","mem":{"mean":15937536,"min":15937536,"q1":15937536,"q2":15937536,"q3":15937536,"max":15937536,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"memUsage":{"mean":0.19,"min":0.19,"q1":0.19,"q2":0.19,"q3":0.19,"max":0.19,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"timeUsage":null,"vmem":{"mean":20811776,"min":20811776,"q1":20811776,"q2":20811776,"q3":20811776,"max":20811776,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"reads":{"mean":2369128,"min":2369128,"q1":2369128,"q2":2369128,"q3":2369128,"max":2369128,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"cpu":{"mean":92.2,"min":92.2,"q1":92.2,"q2":92.2,"q3":92.2,"max":92.2,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"time":{"mean":226,"min":226,"q1":226,"q2":226,"q3":226,"max":226,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"writes":{"mean":10973,"min":10973,"q1":10973,"q2":10973,"q3":10973,"max":10973,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"}},{"cpuUsage":{"mean":48.45,"min":48.45,"q1":48.45,"q2":48.45,"q3":48.45,"max":48.45,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"process":"get_software_versions","mem":{"mean":31391744,"min":31391744,"q1":31391744,"q2":31391744,"q3":31391744,"max":31391744,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"memUsage":{"mean":0.37,"min":0.37,"q1":0.37,"q2":0.37,"q3":0.37,"max":0.37,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"timeUsage":{"mean":0.01,"min":0.01,"q1":0.01,"q2":0.01,"q3":0.01,"max":0.01,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"vmem":{"mean":203644928,"min":203644928,"q1":203644928,"q2":203644928,"q3":203644928,"max":203644928,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"reads":{"mean":16034323,"min":16034323,"q1":16034323,"q2":16034323,"q3":16034323,"max":16034323,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"cpu":{"mean":96.9,"min":96.9,"q1":96.9,"q2":96.9,"q3":96.9,"max":96.9,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"time":{"mean":1559,"min":1559,"q1":1559,"q2":1559,"q3":1559,"max":1559,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"writes":{"mean":673839,"min":673839,"q1":673839,"q2":673839,"q3":673839,"max":673839,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"}},{"cpuUsage":{"mean":84.4,"min":84.4,"q1":84.4,"q2":84.4,"q3":84.4,"max":84.4,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"process":"generate_decoy_database","mem":{"mean":33275904,"min":33275904,"q1":33275904,"q2":33275904,"q3":33275904,"max":33275904,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"memUsage":{"mean":0.52,"min":0.52,"q1":0.52,"q2":0.52,"q3":0.52,"max":0.52,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"timeUsage":{"mean":0.02,"min":0.02,"q1":0.02,"q2":0.02,"q3":0.02,"max":0.02,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"vmem":{"mean":99377152,"min":99377152,"q1":99377152,"q2":99377152,"q3":99377152,"max":99377152,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"reads":{"mean":9928059,"min":9928059,"q1":9928059,"q2":9928059,"q3":9928059,"max":9928059,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"cpu":{"mean":84.4,"min":84.4,"q1":84.4,"q2":84.4,"q3":84.4,"max":84.4,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"time":{"mean":2293,"min":2293,"q1":2293,"q2":2293,"q3":2293,"max":2293,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"writes":{"mean":19392959,"min":19392959,"q1":19392959,"q2":19392959,"q3":19392959,"max":19392959,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"}},{"cpuUsage":{"mean":95.07,"min":95,"q1":95,"q2":95.05,"q3":95.1,"max":95.2,"minLabel":"raw_file_conversion (3)","maxLabel":"raw_file_conversion (4)","q1Label":"raw_file_conversion (6)","q2Label":"raw_file_conversion (5)","q3Label":"raw_file_conversion (2)"},"process":"raw_file_conversion","mem":{"mean":1944439466.67,"min":1910558720,"q1":1927236608,"q2":1954449408,"q3":1960738816,"max":1966178304,"minLabel":"raw_file_conversion (3)","maxLabel":"raw_file_conversion (2)","q1Label":"raw_file_conversion (4)","q2Label":"raw_file_conversion (1)","q3Label":"raw_file_conversion (6)"},"memUsage":{"mean":18.11,"min":17.79,"q1":17.95,"q2":18.2,"q3":18.26,"max":18.31,"minLabel":"raw_file_conversion (3)","maxLabel":"raw_file_conversion (2)","q1Label":"raw_file_conversion (4)","q2Label":"raw_file_conversion (1)","q3Label":"raw_file_conversion (6)"},"timeUsage":{"mean":2.19,"min":2.14,"q1":2.15,"q2":2.2,"q3":2.22,"max":2.24,"minLabel":"raw_file_conversion (4)","maxLabel":"raw_file_conversion (1)","q1Label":"raw_file_conversion (3)","q2Label":"raw_file_conversion (6)","q3Label":"raw_file_conversion (5)"},"vmem":{"mean":5772635477.33,"min":5018533888,"q1":5220744192,"q2":5952249856,"q3":6297552896,"max":6323216384,"minLabel":"raw_file_conversion (3)","maxLabel":"raw_file_conversion (6)","q1Label":"raw_file_conversion (1)","q2Label":"raw_file_conversion (2)","q3Label":"raw_file_conversion (5)"},"reads":{"mean":1726032834,"min":1700765250,"q1":1716547085.25,"q2":1724556912,"q3":1738390863.75,"max":1749438606,"minLabel":"raw_file_conversion (4)","maxLabel":"raw_file_conversion (1)","q1Label":"raw_file_conversion (3)","q2Label":"raw_file_conversion (5)","q3Label":"raw_file_conversion (6)"},"cpu":{"mean":95.07,"min":95,"q1":95,"q2":95.05,"q3":95.1,"max":95.2,"minLabel":"raw_file_conversion (3)","maxLabel":"raw_file_conversion (4)","q1Label":"raw_file_conversion (6)","q2Label":"raw_file_conversion (5)","q3Label":"raw_file_conversion (2)"},"time":{"mean":472505.33,"min":461409,"q1":463844.5,"q2":474125,"q3":479783.25,"max":483286,"minLabel":"raw_file_conversion (4)","maxLabel":"raw_file_conversion (1)","q1Label":"raw_file_conversion (3)","q2Label":"raw_file_conversion (6)","q3Label":"raw_file_conversion (5)"},"writes":{"mean":750898702,"min":731171200,"q1":734145705.25,"q2":751115347.5,"q3":767279126.75,"max":770834106,"minLabel":"raw_file_conversion (3)","maxLabel":"raw_file_conversion (6)","q1Label":"raw_file_conversion (2)","q2Label":"raw_file_conversion (1)","q3Label":"raw_file_conversion (4)"}},{"cpuUsage":{"mean":63.12,"min":60,"q1":61.57,"q2":62.93,"q3":64.75,"max":66.38,"minLabel":"search_engine_comet (2)","maxLabel":"search_engine_comet (3)","q1Label":"search_engine_comet (6)","q2Label":"search_engine_comet (4)","q3Label":"search_engine_comet (1)"},"process":"search_engine_comet","mem":{"mean":7094327296,"min":6289797120,"q1":6376190976,"q2":6636900352,"q3":6741140480,"max":9937190912,"minLabel":"search_engine_comet (2)","maxLabel":"search_engine_comet (4)","q1Label":"search_engine_comet (6)","q2Label":"search_engine_comet (5)","q3Label":"search_engine_comet (1)"},"memUsage":{"mean":20.65,"min":18.31,"q1":18.56,"q2":19.32,"q3":19.62,"max":28.92,"minLabel":"search_engine_comet (2)","maxLabel":"search_engine_comet (4)","q1Label":"search_engine_comet (6)","q2Label":"search_engine_comet (5)","q3Label":"search_engine_comet (1)"},"timeUsage":{"mean":0.22,"min":0.21,"q1":0.21,"q2":0.22,"q3":0.23,"max":0.24,"minLabel":"search_engine_comet (2)","maxLabel":"search_engine_comet (5)","q1Label":"search_engine_comet (6)","q2Label":"search_engine_comet (4)","q3Label":"search_engine_comet (3)"},"vmem":{"mean":7756076373.33,"min":6741676032,"q1":6907805696,"q2":7397615616,"q3":7556684800,"max":10645307392,"minLabel":"search_engine_comet (2)","maxLabel":"search_engine_comet (4)","q1Label":"search_engine_comet (6)","q2Label":"search_engine_comet (5)","q3Label":"search_engine_comet (1)"},"reads":{"mean":4878119250.5,"min":4689200102,"q1":4692163046,"q2":4875583325,"q3":5062921106,"max":5071958765,"minLabel":"search_engine_comet (6)","maxLabel":"search_engine_comet (1)","q1Label":"search_engine_comet (4)","q2Label":"search_engine_comet (2)","q3Label":"search_engine_comet (5)"},"cpu":{"mean":504.95,"min":480,"q1":492.55,"q2":503.45,"q3":518.03,"max":531,"minLabel":"search_engine_comet (2)","maxLabel":"search_engine_comet (3)","q1Label":"search_engine_comet (6)","q2Label":"search_engine_comet (4)","q3Label":"search_engine_comet (1)"},"time":{"mean":63452.5,"min":59924,"q1":60667,"q2":62223.5,"q3":66527.25,"max":68234,"minLabel":"search_engine_comet (2)","maxLabel":"search_engine_comet (5)","q1Label":"search_engine_comet (6)","q2Label":"search_engine_comet (4)","q3Label":"search_engine_comet (3)"},"writes":{"mean":78553794.33,"min":77319384,"q1":77563193.25,"q2":78602401.5,"q3":79354011,"max":79977241,"minLabel":"search_engine_comet (6)","maxLabel":"search_engine_comet (1)","q1Label":"search_engine_comet (4)","q2Label":"search_engine_comet (2)","q3Label":"search_engine_comet (5)"}},{"cpuUsage":{"mean":30.37,"min":30.2,"q1":30.3,"q2":30.4,"q3":30.45,"max":30.5,"minLabel":"index_peptides (2)","maxLabel":"index_peptides (3)","q1Label":"index_peptides (2)","q2Label":"index_peptides (1)","q3Label":"index_peptides (1)"},"process":"index_peptides","mem":{"mean":221067946.67,"min":217604096,"q1":220071936,"q2":222539776,"q3":222799872,"max":223059968,"minLabel":"index_peptides (2)","maxLabel":"index_peptides (3)","q1Label":"index_peptides (2)","q2Label":"index_peptides (1)","q3Label":"index_peptides (1)"},"memUsage":{"mean":2.06,"min":2.03,"q1":2.05,"q2":2.07,"q3":2.07,"max":2.08,"minLabel":"index_peptides (2)","maxLabel":"index_peptides (3)","q1Label":"index_peptides (2)","q2Label":"index_peptides (1)","q3Label":"index_peptides (1)"},"timeUsage":{"mean":0.02,"min":0.02,"q1":0.02,"q2":0.02,"q3":0.02,"max":0.02,"minLabel":"index_peptides (2)","maxLabel":"index_peptides (1)","q1Label":"index_peptides (2)","q2Label":"index_peptides (3)","q3Label":"index_peptides (3)"},"vmem":{"mean":735892821.33,"min":713248768,"q1":713377792,"q2":713506816,"q3":747214848,"max":780922880,"minLabel":"index_peptides (1)","maxLabel":"index_peptides (2)","q1Label":"index_peptides (1)","q2Label":"index_peptides (3)","q3Label":"index_peptides (3)"},"reads":{"mean":80864268,"min":80722583,"q1":80754628,"q2":80786673,"q3":80935110.5,"max":81083548,"minLabel":"index_peptides (1)","maxLabel":"index_peptides (2)","q1Label":"index_peptides (1)","q2Label":"index_peptides (3)","q3Label":"index_peptides (3)"},"cpu":{"mean":121.47,"min":120.8,"q1":121.2,"q2":121.6,"q3":121.8,"max":122,"minLabel":"index_peptides (2)","maxLabel":"index_peptides (3)","q1Label":"index_peptides (2)","q2Label":"index_peptides (1)","q3Label":"index_peptides (1)"},"time":{"mean":3798.33,"min":3574,"q1":3738.5,"q2":3903,"q3":3910.5,"max":3918,"minLabel":"index_peptides (2)","maxLabel":"index_peptides (1)","q1Label":"index_peptides (2)","q2Label":"index_peptides (3)","q3Label":"index_peptides (3)"},"writes":{"mean":46419302.33,"min":46264660,"q1":46290998,"q2":46317336,"q3":46496623.5,"max":46675911,"minLabel":"index_peptides (1)","maxLabel":"index_peptides (2)","q1Label":"index_peptides (1)","q2Label":"index_peptides (3)","q3Label":"index_peptides (3)"}},{"cpuUsage":{"mean":84.1,"min":82.8,"q1":83.65,"q2":84.5,"q3":84.75,"max":85,"minLabel":"extract_percolator_features (3)","maxLabel":"extract_percolator_features (1)","q1Label":"extract_percolator_features (3)","q2Label":"extract_percolator_features (2)","q3Label":"extract_percolator_features (2)"},"process":"extract_percolator_features","mem":{"mean":158158848,"min":157417472,"q1":157536256,"q2":157655040,"q3":158529536,"max":159404032,"minLabel":"extract_percolator_features (1)","maxLabel":"extract_percolator_features (2)","q1Label":"extract_percolator_features (1)","q2Label":"extract_percolator_features (3)","q3Label":"extract_percolator_features (3)"},"memUsage":{"mean":2.45,"min":2.44,"q1":2.45,"q2":2.45,"q3":2.46,"max":2.47,"minLabel":"extract_percolator_features (1)","maxLabel":"extract_percolator_features (2)","q1Label":"extract_percolator_features (1)","q2Label":"extract_percolator_features (3)","q3Label":"extract_percolator_features (3)"},"timeUsage":{"mean":0.04,"min":0.04,"q1":0.04,"q2":0.04,"q3":0.04,"max":0.04,"minLabel":"extract_percolator_features (3)","maxLabel":"extract_percolator_features (1)","q1Label":"extract_percolator_features (3)","q2Label":"extract_percolator_features (2)","q3Label":"extract_percolator_features (2)"},"vmem":{"mean":228110336,"min":227471360,"q1":227719168,"q2":227966976,"q3":228429824,"max":228892672,"minLabel":"extract_percolator_features (1)","maxLabel":"extract_percolator_features (2)","q1Label":"extract_percolator_features (1)","q2Label":"extract_percolator_features (3)","q3Label":"extract_percolator_features (3)"},"reads":{"mean":50140771.67,"min":49986118,"q1":50012465,"q2":50038812,"q3":50218098.5,"max":50397385,"minLabel":"extract_percolator_features (1)","maxLabel":"extract_percolator_features (2)","q1Label":"extract_percolator_features (1)","q2Label":"extract_percolator_features (3)","q3Label":"extract_percolator_features (3)"},"cpu":{"mean":84.1,"min":82.8,"q1":83.65,"q2":84.5,"q3":84.75,"max":85,"minLabel":"extract_percolator_features (3)","maxLabel":"extract_percolator_features (1)","q1Label":"extract_percolator_features (3)","q2Label":"extract_percolator_features (2)","q3Label":"extract_percolator_features (2)"},"time":{"mean":4311,"min":4066,"q1":4210.5,"q2":4355,"q3":4433.5,"max":4512,"minLabel":"extract_percolator_features (3)","maxLabel":"extract_percolator_features (1)","q1Label":"extract_percolator_features (3)","q2Label":"extract_percolator_features (2)","q3Label":"extract_percolator_features (2)"},"writes":{"mean":62209288,"min":62016342,"q1":62041799,"q2":62067256,"q3":62305761,"max":62544266,"minLabel":"extract_percolator_features (1)","maxLabel":"extract_percolator_features (2)","q1Label":"extract_percolator_features (1)","q2Label":"extract_percolator_features (3)","q3Label":"extract_percolator_features (3)"}},{"cpuUsage":null,"process":"percolator","mem":null,"memUsage":null,"timeUsage":{"mean":0.01,"min":0.01,"q1":0.01,"q2":0.01,"q3":0.01,"max":0.01,"minLabel":"percolator (1)","maxLabel":"percolator (1)","q1Label":"percolator (1)","q2Label":"percolator (1)","q3Label":"percolator (1)"},"vmem":null,"reads":null,"cpu":null,"time":{"mean":4121,"min":4121,"q1":4121,"q2":4121,"q3":4121,"max":4121,"minLabel":"percolator (1)","maxLabel":"percolator (1)","q1Label":"percolator (1)","q2Label":"percolator (1)","q3Label":"percolator (1)"},"writes":null}]
+Feb-24 17:16:05.226 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Feb-24 17:16:05.632 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Feb-24 17:16:05.651 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Feb-24 17:16:05.652 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

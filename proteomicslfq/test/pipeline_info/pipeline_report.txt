@@ -1,0 +1,46 @@
+----------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~\
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/proteomicslfq v1.0.0
+----------------------------------------------------
+
+Run Name: marvelous_kimura
+
+## nf-core/proteomicslfq execution completed successfully! ##
+
+
+The workflow was completed at 2024-02-24T22:26:42.515350+08:00 (duration: 3m 31s)
+
+The command used to launch the workflow was as follows:
+
+  nextflow run /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0 -profile docker -c /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0/conf/test_full_hsa.config --outdir test --add_decoys --missing_decoy_action warn
+
+
+
+Pipeline Configuration:
+-----------------------
+ - Run Name: marvelous_kimura
+ - Max Resources: 500 GB memory, 120 cpus, 20h time per job
+ - Container: docker - nfcore/proteomicslfq:1.0.0
+ - Output dir: test
+ - Launch dir: /data2/zhiyu/software/proteomicslfq
+ - Working dir: /data2/zhiyu/software/proteomicslfq/work
+ - Script dir: /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0
+ - User: zhiyu
+ - Config Profile: docker
+ - Config Profile Description: Real-world sized test dataset to check pipeline function and sanity of results
+ - Config Files: /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0/nextflow.config, /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0/conf/test_full_hsa.config
+ - Date Started: 2024-02-24T22:23:11.196936+08:00
+ - Date Completed: 2024-02-24T22:26:42.515350+08:00
+ - Pipeline script file path: /data2/zhiyu/software/proteomicslfq/proteomicslfq-1.0.0/main.nf
+ - Pipeline script hash ID: 18f2d39694ed44c868638eb1f295ef68
+ - Nextflow Version: 22.10.1
+ - Nextflow Build: 5828
+ - Nextflow Compile Timestamp: 27-10-2022 16:58 UTC
+
+--
+nf-core/proteomicslfq
+https://github.com/nf-core/proteomicslfq

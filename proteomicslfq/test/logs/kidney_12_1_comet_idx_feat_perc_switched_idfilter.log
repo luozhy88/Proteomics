@@ -1,0 +1,9 @@
+Filtering by peptide score...
+Removing unreferenced protein hits...
+Before filtering:
+1 identification runs with 5259 proteins,
+6598 spectra identified with 6598 spectrum matches.
+After filtering:
+1 identification runs with 310 proteins,
+340 spectra identified with 340 spectrum matches.
+IDFilter took 0.49 s (wall), 0.49 s (CPU), 0.01 s (system), 0.48 s (user); Peak Memory Usage: 47 MB.

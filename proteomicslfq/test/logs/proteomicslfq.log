@@ -1,0 +1,309 @@
+Performing feature intensity-based quantification.
+Progress of 'loading spectra list':
+  1.68 %                 53.20 %                 97.32 %               -- done [took 18.25 s (CPU), 2.08 s (Wall)] -- 
+Progress of 'loading chromatogram list':
+-- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+Progress of 'picking peaks':
+-- done [took 0.06 s (CPU), 0.06 s (Wall)] -- 
+Picked spectra by MS-level:
+  MS-level 1: 0 / 4753
+  MS-level 2: 0 / 7167
+Correction to the highest intensity peak failed 47 times because of missing peaks in the MS1. No changes were applied in these cases.
+Info: Corrected 7120 precursors.
+Precursor correction:
+  median        = 0.258566856119566 ppm  MAD = 1.16286009142933
+  median (abs.) = 1.195428940147341 ppm  MAD = 0.842428880795284
+Progress of 'mass trace detection':
+-- done [took 0.07 s (CPU), 0.08 s (Wall)] -- 
+Median chromatographic FWHM: 10.178
+Using 3391 seeds from untargeted feature extraction.
+RT window size calculated as 203.56 seconds.
+Preparing mapping of peptide data...
+Seeds without RT and m/z overlap with identified peptides added: 2759
+Creating assay library...
+Found 5015 feature candidates in total.
+3047 features left after filtering.
+Model fitting: 2894 successes, 153 failures
+
+Summary statistics (counting distinct peptides including PTMs):
+3042 peptides identified (3042 internal, 0 additional external)
+3031 peptides with features (3031 internal, 0 external)
+11 peptides without features (11 internal, 0 external)
+
+Progress of 'loading spectra list':
+  13.33 %                 50.90 %                 76.35 %               -- done [took 22.76 s (CPU), 2.93 s (Wall)] -- 
+Progress of 'loading chromatogram list':
+-- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+Progress of 'picking peaks':
+-- done [took 0.07 s (CPU), 0.06 s (Wall)] -- 
+Picked spectra by MS-level:
+  MS-level 1: 0 / 4862
+  MS-level 2: 0 / 6926
+Correction to the highest intensity peak failed 67 times because of missing peaks in the MS1. No changes were applied in these cases.
+Info: Corrected 6859 precursors.
+Precursor correction:
+  median        = 0.252269203217367 ppm  MAD = 1.319610885623796
+  median (abs.) = 1.330111390395636 ppm  MAD = 0.932393180997282
+Progress of 'mass trace detection':
+-- done [took 0.07 s (CPU), 0.06 s (Wall)] -- 
+Median chromatographic FWHM: 9.59843
+Using 3477 seeds from untargeted feature extraction.
+RT window size calculated as 191.969 seconds.
+Preparing mapping of peptide data...
+Seeds without RT and m/z overlap with identified peptides added: 2854
+Creating assay library...
+Found 5701 feature candidates in total.
+3276 features left after filtering.
+Model fitting: 3199 successes, 77 failures
+
+Summary statistics (counting distinct peptides including PTMs):
+3249 peptides identified (3249 internal, 0 additional external)
+3248 peptides with features (3248 internal, 0 external)
+1 peptides without features (1 internal, 0 external)
+
+Progress of 'loading spectra list':
+  36.90 %                 73.80 %               -- done [took 21.77 s (CPU), 2.49 s (Wall)] -- 
+Progress of 'loading chromatogram list':
+-- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+Progress of 'picking peaks':
+-- done [took 0.04 s (CPU), 0.04 s (Wall)] -- 
+Picked spectra by MS-level:
+  MS-level 1: 0 / 3579
+  MS-level 2: 3 / 9612
+Correction to the highest intensity peak failed 57 times because of missing peaks in the MS1. No changes were applied in these cases.
+Info: Corrected 9555 precursors.
+Precursor correction:
+  median        = 0.181024455071107 ppm  MAD = 1.152869988531994
+  median (abs.) = 1.157778208896699 ppm  MAD = 0.833297249885269
+Progress of 'mass trace detection':
+-- done [took 0.04 s (CPU), 0.04 s (Wall)] -- 
+Median chromatographic FWHM: 9.52828
+Using 4178 seeds from untargeted feature extraction.
+RT window size calculated as 190.566 seconds.
+Preparing mapping of peptide data...
+Seeds without RT and m/z overlap with identified peptides added: 3575
+Creating assay library...
+Found 6232 feature candidates in total.
+3709 features left after filtering.
+Model fitting: 3625 successes, 84 failures
+
+Summary statistics (counting distinct peptides including PTMs):
+3706 peptides identified (3706 internal, 0 additional external)
+3704 peptides with features (3704 internal, 0 external)
+2 peptides without features (2 internal, 0 external)
+
+Progress of 'loading spectra list':
+  41.78 %                 87.38 %               -- done [took 16.54 s (CPU), 1.93 s (Wall)] -- 
+Progress of 'loading chromatogram list':
+-- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+Progress of 'picking peaks':
+-- done [took 0.04 s (CPU), 0.05 s (Wall)] -- 
+Picked spectra by MS-level:
+  MS-level 1: 0 / 5812
+  MS-level 2: 4 / 4911
+Correction to the highest intensity peak failed 29 times because of missing peaks in the MS1. No changes were applied in these cases.
+Info: Corrected 4882 precursors.
+Precursor correction:
+  median        = 0.222852184409736 ppm  MAD = 1.381271629225155
+  median (abs.) = 1.377408055210486 ppm  MAD = 0.952238312104603
+Progress of 'mass trace detection':
+-- done [took 0.09 s (CPU), 0.09 s (Wall)] -- 
+Median chromatographic FWHM: 9.68095
+Using 2120 seeds from untargeted feature extraction.
+RT window size calculated as 193.619 seconds.
+Preparing mapping of peptide data...
+Seeds without RT and m/z overlap with identified peptides added: 1696
+Creating assay library...
+Found 3299 feature candidates in total.
+2161 features left after filtering.
+Model fitting: 2107 successes, 54 failures
+
+Summary statistics (counting distinct peptides including PTMs):
+2133 peptides identified (2133 internal, 0 additional external)
+2130 peptides with features (2130 internal, 0 external)
+3 peptides without features (3 internal, 0 external)
+
+Progress of 'aligning maps':
+
+Alignment based on:
+- 35 data points for sample 1
+- 45 data points for sample 2
+- 40 data points for sample 3
+- 68 data points for sample 4
+
+-- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+Alignment differences (second) for percentiles (before & after): 
+100%	99%	95%	90%	75%	50%	25%
+before alignment:
+32	21	21	11	6	4	1	
+after alignment:
+22	13	12	7	5	2	1	
+Alignment differences (second) for percentiles (before & after): 
+100%	99%	95%	90%	75%	50%	25%
+before alignment:
+128	61	39	14	4	2	1	
+after alignment:
+117	49	41	15	13	9	3	
+Alignment differences (second) for percentiles (before & after): 
+100%	99%	95%	90%	75%	50%	25%
+before alignment:
+61	52	32	8	4	2	1	
+after alignment:
+54	26	24	16	8	3	1	
+Alignment differences (second) for percentiles (before & after): 
+100%	99%	95%	90%	75%	50%	25%
+before alignment:
+52	39	14	11	4	2	0	
+after alignment:
+34	34	16	10	5	3	1	
+Max alignment difference (seconds): 22.4146
+Progress of 'Linking features':
+  56.86 %               -- done [took 0.05 s (CPU), 0.06 s (Wall)] -- 
+Size of consensus fraction: 11031
+Using prefix decoy string 'rev'
+Info: using 'Trypsin' as enzyme (obtained from idXML) for digestion.
+Peptide identification engine: COMET
+Enzyme: Trypsin
+Info: using 'full' as enzyme specificity (obtained from idXML) for digestion.
+Mapping 1550 peptides to 41194 proteins.
+Searching with up to 3 ambiguous amino acid(s) and 0 mismatch(es)!
+Building trie ... done (0s)
+Merge took: 0.00 s (wall), 0.00 s (CPU), 0.00 s (system), 0.00 s (user)
+Memory usage (Aho-Corasick): 0 MB (working set delta), 0 MB (peak working set delta)
+
+
+Aho-Corasick done:
+  found 2126 hits for 1550 of 1550 peptides.
+Peptide hits passing enzyme filter: 2126
+     ... rejected by enzyme filter: 34
+-----------------------------------
+Peptide statistics
+
+  unmatched                : 0 (0 %)
+  target/decoy:
+    match to target DB only: 1539 (99 %)
+    match to decoy DB only : 10 (0 %)
+    match to both          : 1 (0 %)
+
+  mapping to proteins:
+    no match (to 0 protein)         : 0
+    unique match (to 1 protein)     : 1338
+    non-unique match (to >1 protein): 212
+-----------------------------------
+Protein statistics
+
+  total proteins searched: 41194
+  matched proteins       : 846 (846 new)
+  matched target proteins: 834 (98 %)
+  matched decoy proteins : 12 (1 %)
+  orphaned proteins      : 5 (all removed)
+-----------------------------------
+Peptide FDR AUC before protein inference: 0.860387
+Building graph on 1122 spectra and 846 proteins.
+Progress of 'Building graph...':
+-- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+Found 627 connected components.
+Testing 45 param combinations.
+Evaluating: 0.1 0.01 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.287792 and roc100 = 0.846273
+Evaluating: 0.1 0.01 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.153859 and roc100 = 0.838879
+Evaluating: 0.1 0.01 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.0856091 and roc100 = 0.833583
+Evaluating: 0.1 0.2 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.371159 and roc100 = 0.85047
+Evaluating: 0.1 0.2 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.215051 and roc100 = 0.841976
+Evaluating: 0.1 0.2 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.123659 and roc100 = 0.835182
+Evaluating: 0.1 0.4 0.2
+Skipping improbable parameter combination.. 
+Evaluating: 0.1 0.4 0.5
+Evaluating: 0.1 0.4 0.7
+Evaluating: 0.25 0.01 0.2
+<Skipping improbable parameter combination.. > occurred 3 times
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.246769 and roc100 = 0.834083
+Evaluating: 0.25 0.01 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.12985 and roc100 = 0.819494
+Evaluating: 0.25 0.01 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.0715571 and roc100 = 0.814398
+Evaluating: 0.25 0.2 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.340041 and roc100 = 0.840977
+Evaluating: 0.25 0.2 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.186988 and roc100 = 0.823991
+Evaluating: 0.25 0.2 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.104944 and roc100 = 0.818096
+Evaluating: 0.25 0.4 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.369946 and roc100 = 0.844474
+Evaluating: 0.25 0.4 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.214289 and roc100 = 0.826589
+Evaluating: 0.25 0.4 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.123261 and roc100 = 0.820993
+Evaluating: 0.5 0.01 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.219378 and roc100 = 0.816397
+Evaluating: 0.5 0.01 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.115917 and roc100 = 0.800909
+Evaluating: 0.5 0.01 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.0638791 and roc100 = 0.799111
+Evaluating: 0.5 0.2 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.30702 and roc100 = 0.821693
+Evaluating: 0.5 0.2 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.1627 and roc100 = 0.804906
+Evaluating: 0.5 0.2 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.0899791 and roc100 = 0.800709
+Evaluating: 0.5 0.4 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.347848 and roc100 = 0.826489
+Evaluating: 0.5 0.4 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.194313 and roc100 = 0.807104
+Evaluating: 0.5 0.4 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.109875 and roc100 = 0.801809
+Evaluating: 0.65 0.01 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.210388 and roc100 = 0.810102
+Evaluating: 0.65 0.01 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.112056 and roc100 = 0.795713
+Evaluating: 0.65 0.01 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.0619148 and roc100 = 0.791517
+Evaluating: 0.65 0.2 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.293406 and roc100 = 0.815997
+Evaluating: 0.65 0.2 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.154032 and roc100 = 0.798112
+Evaluating: 0.65 0.2 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.0849691 and roc100 = 0.793215
+Evaluating: 0.65 0.4 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.337242 and roc100 = 0.819694
+Evaluating: 0.65 0.4 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.185824 and roc100 = 0.79971
+Evaluating: 0.65 0.4 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.104481 and roc100 = 0.794115
+Evaluating: 0.8 0.01 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.203866 and roc100 = 0.801209
+Evaluating: 0.8 0.01 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.109681 and roc100 = 0.790917
+Evaluating: 0.8 0.01 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.0609917 and roc100 = 0.788319
+Evaluating: 0.8 0.2 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.282512 and roc100 = 0.807904
+Evaluating: 0.8 0.2 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.147729 and roc100 = 0.793116
+Evaluating: 0.8 0.2 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.0815271 and roc100 = 0.788719
+Evaluating: 0.8 0.4 0.2
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.32816 and roc100 = 0.8131
+Evaluating: 0.8 0.4 0.5
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.179045 and roc100 = 0.795314
+Evaluating: 0.8 0.4 0.7
+Evaluation of protein probabilities: Difference estimated vs. T-D FDR = 0.100353 and roc100 = 0.789019
+Best params found at a=0.5, b=0.01, g=0.7
+Running with best parameters:
+Progress of 'Annotating indistinguishable proteins...':
+-- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+Annotated 71 indist. protein groups.
+Peptide FDR AUC after protein inference: 0.892536
+ConsensusXMLFile::store():  found 1 invalid unique ids
+exporting consensus map: "null" to mzTab: 
+MzTab: Inference data provided. Considering first run only for inference data.
+MSstats run 1 corresponds to OpenMS fraction group 1
+MSstats run 2 corresponds to OpenMS fraction group 2
+MSstats run 3 corresponds to OpenMS fraction group 3
+MSstats run 4 corresponds to OpenMS fraction group 4
+ProteomicsLFQ took 01:24 m (wall), 02:43 m (CPU), 1.39 s (system), 02:42 m (user); Peak Memory Usage: 696 MB.

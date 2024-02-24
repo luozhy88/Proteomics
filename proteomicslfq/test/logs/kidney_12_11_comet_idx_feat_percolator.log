@@ -1,0 +1,9 @@
+Loading input file: kidney_12_11_comet_idx_feat.idXML
+Merging peptide ids.
+Merging protein ids.
+Prepared percolator input.
+PSM-level FDR: All PSMs are returned by percolator. Reannotating all PSMs in input data with percolator output.
+Scores of all other PSMs will be set to 1.0.
+9407 suitable PeptideHits of 9407 PSMs were reannotated.
+PercolatorAdapter finished successfully!
+PercolatorAdapter took 2.59 s (wall), 1.34 s (CPU), 0.06 s (system), 1.28 s (user); Peak Memory Usage: 63 MB.

@@ -1,0 +1,45 @@
+Progress of 'Loading idXML':
+-- done [took 0.27 s (CPU), 0.27 s (Wall)] -- 
+Using prefix decoy string 'rev'
+Peptide identification engine: COMET
+Enzyme: Trypsin
+Progress of 'Load first DB chunk':
+-- done [took 0.19 s (CPU), 0.19 s (Wall)] -- 
+Mapping 4638 peptides to 41194 proteins.
+Searching with up to 3 ambiguous amino acid(s) and 0 mismatch(es)!
+Building trie ... done (0s)
+Progress of 'Aho-Corasick':
+-- done [took 0.47 s (CPU), 0.12 s (Wall)] -- 
+Merge took: 0.00 s (wall), 0.00 s (CPU), 0.00 s (system), 0.00 s (user)
+Memory usage (Aho-Corasick): 17 MB (working set delta), 24 MB (peak working set delta)
+
+
+Aho-Corasick done:
+  found 5301 hits for 4638 of 4638 peptides.
+Peptide hits passing enzyme filter: 5301
+     ... rejected by enzyme filter: 449
+-----------------------------------
+Peptide statistics
+
+  unmatched                : 0 (0 %)
+  target/decoy:
+    match to target DB only: 2574 (55 %)
+    match to decoy DB only : 2029 (43 %)
+    match to both          : 35 (0 %)
+
+  mapping to proteins:
+    no match (to 0 protein)         : 0
+    unique match (to 1 protein)     : 4367
+    non-unique match (to >1 protein): 271
+-----------------------------------
+Protein statistics
+
+  total proteins searched: 41194
+  matched proteins       : 3967 (3967 new)
+  matched target proteins: 2084 (52 %)
+  matched decoy proteins : 1883 (47 %)
+  orphaned proteins      : 0 (all removed)
+-----------------------------------
+Progress of 'Storing idXML':
+-- done [took 0.08 s (CPU), 0.09 s (Wall)] -- 
+PeptideIndexer took 1.03 s (wall), 1.40 s (CPU), 0.08 s (system), 1.32 s (user); Peak Memory Usage: 97 MB.
