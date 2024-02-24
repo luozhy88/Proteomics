@@ -1,4 +1,6 @@
 # Proteomics
+protein fasta: https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000005640/UP000005640_9606.fasta.gz  
+
 ## 31site
 nextflow run /data/zhiyu/software/proteomicslq/proteomicslfq-1.0.0  -profile test,docker --outdir test2  
 https://github.com/nf-core/test-datasets/tree/proteomicslfq  
