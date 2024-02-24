@@ -1,6 +1,9 @@
 # Proteomics
 protein fasta: https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000005640/UP000005640_9606.fasta.gz  
 
+# example 
+https://github.com/bigbio/proteomics-sample-metadata/blob/master/sdrf-specification-examples/PXD006482/PXD006482.sdrf.tsv
+
 ## 31site
 
 bash -x ~/data/Projects/github/Proteomics/proteomicslfq/run_bash.sh  #ok
